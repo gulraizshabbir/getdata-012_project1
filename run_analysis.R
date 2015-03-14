@@ -8,6 +8,7 @@ testlabels<-read.table("y_test.txt")
 activity<-read.table("activity_labels.txt")
     colnames(activity)<-c("names","Activity")
 library("plyr", lib.loc="~/R/win-library/3.1")
+library("dplyr")
     merged<-arrange(join(testset,activity),names)
 ##grouped<-group_by(merged,Activity)
 
